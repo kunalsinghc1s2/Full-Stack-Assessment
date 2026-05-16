@@ -4,3 +4,13 @@ client/dist
 server/node_modules
 client/node_modules
 .DS_Store
+
+# Logs & Test files
+*.log
+test.js
+test-*.js
+test-dashboard.js
+screenshots/
+recordings/
+artifacts/
+.gemini/

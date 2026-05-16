@@ -4,8 +4,8 @@
   "description": "Full-stack Team Task Manager",
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
-    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server && npm run generate --prefix server",
-    "start": "npm start --prefix server"
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client && npx prisma@^6.19.0 generate --schema=server/prisma/schema.prisma",
+    "start": "npx prisma@^6.19.0 migrate deploy --schema=server/prisma/schema.prisma && npm start --prefix server"
   },
   "dependencies": {},
   "devDependencies": {
